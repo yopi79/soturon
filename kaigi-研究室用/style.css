@@ -1,0 +1,200 @@
+/* normalize */
+body { margin: 0; }
+
+/* global styles */
+video {
+  background-color: #111;
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.note {
+  text-align: center;
+}
+
+.meta {
+  text-align: center;
+  font-size: .8rem;
+  color: gray;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+}
+
+/* p2p-media styles */
+.p2p-media {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p2p-media .remote-stream {
+  width: 50%;
+}
+
+.p2p-media .local-stream {
+  width: 30%;
+}
+
+/* p2p-data styles */
+.p2p-data {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  margin: 0 8px;
+}
+
+.p2p-data .messages {
+  background-color: #eee;
+  min-height: 100px;
+  padding: 8px;
+  margin-top: 0;
+}
+
+/* room */
+.room {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  gap: 8px;
+  margin: 0 8px;
+}
+
+.room .remote-streams {
+  background-color: #f6fbff;
+}
+
+.room .messages {
+  background-color: #eee;
+  min-height: 100px;
+  padding: 8px;
+  margin-top: 0;
+}
+.room .chat{
+  display: block;
+}
+img{
+  width: 12px;
+  height: 12px;
+}
+
+.overlay {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.assist {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 8px;
+  /* margin: 0 8px; */
+
+  margin: 15px auto 0;
+  padding: 15px 20px 20px;
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+
+.assist_title {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.fparam{
+  padding: 10px 10px 10px 0px;
+  background-color:white;
+}
+
+.result {
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.result_data {
+  padding-left: 5px;
+  line-height: 1.8;
+  min-width: 100px;
+}
+.result_data.result_data--happy {
+  background: #e3b8fc;
+}
+.result_data.result_data--angry {
+  margin-top: 15px;
+  background: #11ffff
+}
+.result_data.result_data--disgusted {
+  margin-top: 15px;
+  background: #87a1ff;
+}
+.result_data.result_data--surprised {
+  margin-top: 15px;
+  background: #a2a2a2;
+}
+
+.remote {
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.remote_data {
+  padding-left: 5px;
+  line-height: 1.8;
+  min-width: 100px;
+}
+.remote_data.remote_data--happy {
+  background: #e3b8fc;
+}
+.remote_data.remote_data--on{
+  margin-top: 15px;
+  background: #11ffff
+}
+.remote_data.remote_data--off {
+  margin-top: 15px;
+  background: #87a1ff;
+}
+.remote_data.remote_data--surprised {
+  margin-top: 15px;
+  background: #a2a2a2;
+}
+
+
+.gallary {
+  margin: 10px auto;
+  margin: 10px auto;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.wrapper{
+  position: relative;
+}
+
+.wrapper canvas {
+  position: absolute;
+
+}
+.remote-streams{
+  position: relative;
+}
+
+.remote-streams canvas {
+  position: absolute;
+
+}

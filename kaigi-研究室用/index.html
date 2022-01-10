@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ビデオ会議</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading">Room example</h1>
+    <p class="note">
+      Change Room mode (before join in a room):
+      <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+    </p>
+    <div class="room">
+      <div>
+        <div class="wrapper">
+          <!-- 自分のビデオ -->
+          <video id="js-local-stream" width="289.2" height="216.9" autoplay playsinline="true"></video>
+          <!-- canvasを追加してみた -->
+          <canvas id="overlay" class="overlay"></canvas>
+        </div>
+        
+        <span id="js-room-mode"></span>:
+        <input type="text" placeholder="Room Name" id="js-room-id">
+        <button id="js-join-trigger">Join</button>
+        <button id="js-leave-trigger">Leave</button>
+        <button id="js-mic-trigger"><img src="img/micoff.png"></button>
+        <button id="js-video-trigger"><img src="img/videoff.png"></button>
+        <button id="js-share-trigger">share</button>
+        <button id="js-check-trigger">Check</button>
+      </div>
+
+      <!-- 相手側のビデオ -->
+      <div class="remote-streams" id="js-remote-streams"></div>
+
+      <div>
+        <pre class="messages" id="js-messages"></pre>
+        <span class="chat">Name:
+          <input type="text" id="js-local-name"></span>
+        <span>Text :
+          <input type="text" id="js-local-text"></span>
+        <button id="js-send-trigger">Send</button>
+      </div>
+    </div>
+    <div class="assist">
+      <div class="fparam">
+        <p class="assist_title">EMOTION</p>
+        <ul id="result" class="result">
+          <li class="result_data result_data--happy">☺️&nbsp;:&nbsp;<span id="happyText">0</span>%</li>
+          <li class="result_data result_data--surprised">😲&nbsp;:&nbsp;<span id="surprisedText">0</span>%</li>
+          <li class="result_data result_data--angry">faceON&nbsp;<span id="myfaceON"></span></li>
+          <li class="result_data result_data--disgusted">faceOFF&nbsp;<span id="myfaceOFF"></span></li>    
+        </ul>
+      </div>
+      <div class="fparam">
+        <p class="assist_title">REMOTE EMOTION</p>
+        <ul id="result" class="result">
+          <li class="remote_data remote_data--happy">☺️&nbsp;:&nbsp;&nbsp;<span id="happycount">0</span>points</li>
+          <li class="remote_data remote_data--surprised">😲&nbsp;:&nbsp;&nbsp;<span id="surprisedcount">0</span>points</li>
+          <li class="remote_data remote_data--on">faceON&nbsp;:&nbsp;<span id="faceON">0</span>points</li>
+          <li class="remote_data remote_data--off">faceOFF&nbsp;:&nbsp;<span id="faceOFF">0</span>person</li>    
+        </ul>
+        <p><button id="button1">Download</button></p>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div id="gallary" class="gallary"></div>
+    <p class="meta" id="js-meta"></p>
+  </div>
+  <!-- ライブラリ -->
+  <script src="./facecheck/js/lib/clmtrackr.js"></script>
+  <!-- 顔のモデル -->
+  <script src="./facecheck/js/lib/model_pca_20_svm.js"></script>
+  <!-- ライブラリ表情識別機能 -->
+  <script src="./facecheck/js/lib/emotion_classifier.js"></script>
+  <!-- 表情モデル -->
+  <script src="./facecheck/js/lib/emotionmodel.js"></script>
+  <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
+  <script src="./key.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

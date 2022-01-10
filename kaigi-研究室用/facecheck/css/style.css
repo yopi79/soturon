@@ -1,0 +1,111 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+.content {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+}
+
+.video {
+  max-width: 100%;
+  /* object-fit: fill; */
+  display: block;
+  margin: 0 auto;
+}
+
+.overlay {
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.assist {
+  margin: 15px auto 0;
+  padding: 15px 20px 20px;
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.assist_title {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result {
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.result_data {
+  padding-left: 5px;
+  line-height: 1.8;
+  min-width: 100px;
+}
+.result_data.result_data--happy {
+  background: #e3b8fc;
+}
+.result_data.result_data--angry {
+  margin-top: 15px;
+  background: #11ffff
+}
+.result_data.result_data--disgusted {
+  margin-top: 15px;
+  background: #87a1ff;
+}
+.result_data.result_data--surprised {
+  margin-top: 15px;
+  background: #a2a2a2;
+}
+
+.button {
+  width: 100px;
+  display: block;
+  padding: 12px;
+  border-radius: 2px;
+  font-weight: bold;
+  margin: 30px auto 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.gallary {
+  margin: 10px auto;
+  margin: 10px auto;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.assist.button{
+  position: relative;
+  width: 1000px;
+}
